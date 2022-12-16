@@ -1,7 +1,7 @@
 #include "main.h"
 
 /**
- * print_most_numbers - prints from 0 to 9
+ * print_more_numbers - prints from 0 to 9
  *
  * Return nothing
  */
@@ -11,7 +11,7 @@ void print_more_numbers(void)
 
 	for (number 48; number < 58; number++)
 	{
-		if ((c == 50) || (c == 52)
+		if ((c == 50) || (c == 52))
 		{
 			continue;
 		}
