@@ -1,12 +1,13 @@
 #include <stdio.h>
-#include "main.h"
+#include <stlib.h>
 
 
 /**
- * fizz_buzz - creating fizz buzz
- * return: always 0
+ * main - Entry point
+ * @x: parameter
+ * Return: always 0
  */
-void fizz_buzz(void)
+int main(void)
 {
 	int x;
 
@@ -24,4 +25,5 @@ void fizz_buzz(void)
 
 	}
 	printf("\n");
+	return (0);
 }
