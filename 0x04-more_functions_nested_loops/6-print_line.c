@@ -8,9 +8,14 @@
  */
 void print_line(int n)
 {
-	while (n-- > 0)
+	int x;
+
+	if (n <= 0)
+		putchar('\n');
+	else
 	{
-		putchar('-');
+		for (x = 0; x < n; x++)
+			putchar(95);
+		putchar('\n');
 	}
-	putchar('\n');
 }
