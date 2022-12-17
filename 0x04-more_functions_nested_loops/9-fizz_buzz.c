@@ -3,7 +3,7 @@
 
 /**
  * main - Entry point
- * @x: parameter
+ *
  * Return: always 0
  */
 int main(void)
