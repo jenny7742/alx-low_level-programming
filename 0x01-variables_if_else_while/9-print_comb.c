@@ -10,13 +10,13 @@ int main(void)
 
 	w = 0;
 
-	while (w < 9)
+	while (w < 10)
 	{
 		putchar(48 + w);
 		if (w != 9)
 		{
 			putchar(',');
-			putchar('-');
+			putchar(' ');
 		}
 		w++;
 	}
