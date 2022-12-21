@@ -10,9 +10,12 @@ void puts2(char *str)
 {
 	int i;
 	int len = strlen(str);
+	char s[32] = " ";
 
 	for (i = 0; i < len; i += 2)
 	{
 		putchar(str[i]);
+		s[i / 2] = str[i];
 	}
+	printf("%s\n", s);
 }
