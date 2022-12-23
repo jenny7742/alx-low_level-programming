@@ -10,29 +10,21 @@
 
 char *cap_string(char *str)
 {
-	int index = 0;
+	char tex [] = {32, 9, '\n', ',', ';', '.', '!', '?' '"', '(', ')', '{', '}'};
 
-	while (str[index])
+	int i = 0, j;
+	int len = 13;
+
+	while (str[i])
 	{
-		while (!(str[index] >= 'a' && str[index] <= 'z'))
-			index++;
-		if (str[index - 1] == ' ' ||
-		    str[index - 1] == '\t' ||
-		    str[index - 1] == '\n' ||
-		    str[index - 1] == ';' ||
-		    str[index - 1] == ',' ||
-		    str[index - 1] == '.' ||
-		    str[index - 1] == '!' ||
-		    str[index - 1] == '?' ||
-		    str[index - 1] == '"' ||
-		    str[index - 1] == '(' ||
-		    str[index - 1] == ')' ||
-		    str[index - 1] == '{' ||
-		    str[index - 1] == '}' ||
-		    index == 0)
-			str -= 32;
-		index++;
-
+		j = 0;
+		while ( i < j)
+		{
+			if ((i == 0 || str[i - 1] == tex[j]) && (str[i] >= 97 && str[i] <= 122))
+				str[i] = str[i] - 32;
+			j++;
+		}
+		i++;
 	}
 	return (str);
 }
