@@ -10,7 +10,7 @@
 
 char *cap_string(char *str)
 {
-	char tex [] = {32, 9, '\n', ',', ';', '.', '!', '?' '"', '(', ')', '{', '}'};
+	char tex [] = {32, 9, '\n', ',', ';', '.', '!', '?', '\"', '(', ')', '{', '}'};
 
 	int i = 0, j;
 	int len = 13;
@@ -18,7 +18,7 @@ char *cap_string(char *str)
 	while (str[i])
 	{
 		j = 0;
-		while ( i < j)
+		while ( i < len)
 		{
 			if ((i == 0 || str[i - 1] == tex[j]) && (str[i] >= 97 && str[i] <= 122))
 				str[i] = str[i] - 32;
