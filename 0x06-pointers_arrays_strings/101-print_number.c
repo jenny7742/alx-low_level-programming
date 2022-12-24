@@ -1,5 +1,4 @@
 #include <stdio.h>
-#include <string.h>
 #include "main.h"
 
 /**
@@ -9,17 +8,21 @@
  */
 void print_number(int n)
 {
-	unsigned int num = n;
+	unsigned int m;
 
-	if (n < 0)
+	if (m < 0)
 	{
 		putchar('-');
-		num = -num;
+		m = -n;
+	}
+	else
+	{
+		m = n;
 	}
 
-	if ((num % 10) > 0)
+	if ((m / 10) != 0)
 	{
-		print_number(num / 10);
+		print_number(m / 10);
 	}
-	putchar((num % 10) + '0');
+	putchar((m % 10) + '0');
 }
