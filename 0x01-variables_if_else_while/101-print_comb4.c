@@ -24,12 +24,12 @@ int main(void)
 				{
 					putchar(48 + i);
 					putchar(48 + x);
-					putchar(48 +  a);
+					putchar(48 + a);
 
-					if (i + a != 17 && x + i != 17)
+					if (i + x + a != 24)
 					{
-						putchar(',');
-						putchar(' ');
+						putchar(44);
+						putchar(32);
 					}
 				}
 				a++;
