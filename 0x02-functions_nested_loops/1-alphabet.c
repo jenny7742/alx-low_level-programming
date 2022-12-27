@@ -9,6 +9,14 @@ void print_alphabet(void)
 {
 	int i;
 
-	for (i = 'a'; i < 'z'; i++)
+	for (i = 'a'; i <= 'z'; i++)
 		putchar(i);
+	putchar('\n');
+}
+
+int main()
+{
+	print_alphabet();
+	return (0);
+
 }
