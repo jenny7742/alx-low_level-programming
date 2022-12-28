@@ -9,14 +9,16 @@
 int print_last_digit(int c)
 {
 	int x;
-
+	
 	if (c < 0)
 	{
-		x = (c - (c * 2)) % 10;
+		c = -c;
+		return (c % 10);
 	}
 	else
-	{
 		x = c % 10;
-	}
+
 	return (x);
+
 }
+
