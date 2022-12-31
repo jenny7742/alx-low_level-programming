@@ -12,19 +12,17 @@ int print_sign(int n)
 
 	if (n > 0)
 	{
-		putchar(43);
-		x = 1;
+		putchar('+');
+		return (1);
 	}
-	else if (n < 0)
+	else if (n == 0)
 	{
-		putchar(45);
-		x = -1;
+		putchar('0');
+		return (0);
 	}
 	else
 	{
-		putchar(48);
-		x = 0;
+		putchar('-');
+		return (-1);
 	}
-
-	return (x);
 }
