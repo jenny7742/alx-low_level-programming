@@ -21,11 +21,3 @@ void print_to_98(int n)
 		printf("%d\n", n);
 	}
 }
-
-int main()
-{
-	print_to_98(111);
-	print_to_98(-10);
-
-	return (0);
-}
