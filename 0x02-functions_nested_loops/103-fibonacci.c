@@ -25,4 +25,5 @@ int main(void)
 		n2 = n_Sum;
 	}
 	printf("%.0f\n", total);
+	return (0);
 }
