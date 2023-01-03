@@ -1,5 +1,5 @@
 #include <stdio.h>
-#include "main.h"
+#define LARGEST 10000000000
 
 /**
  * main - Entry point
@@ -8,46 +8,33 @@
  */
 int main(void)
 {
-	unsigned long n1 = 0, n2 = 1, n_sum;
-	unsigned long n1_hf1, n1_hf2, n2_hf1, n2_hf2;
-	unsigned long hf1, hf2;
-	int wax;
+	unsigned long int fr1 = 0, bk1 = 1, fr2 = 0, bk2 = 2;
+	unsigned long int hold1, hold2, hold3;
+	int count;
 
-	for (wax = 0; wax < 92; wax++)
+	printf("%lu, %lu, ", bk1, bk2);
+	for (count = 2; count < 98; count++)
 	{
-		n_sum = n1 + n2;
-		printf("%lu, ", n_sum);
-
-		n1 = n2;
-		n2 = n_sum;
-	}
-
-	n1_hf1 = n1 / 10000000;
-	n2_hf1 = n2 / 10000000;
-	n1_hf2 = n1 % 10000000;
-	n2_hf2 = n2 % 10000000;
-
-	for (wax = 93; wax < 99; wax++)
-	{
-		hf1 = n1_hf1 + n2_hf1;
-		hf2 = n1_hf2 + n2_hf2;
-		if (n1_hf2 + n2_hf2 > 9999999999)
+		if (bk1 + bk2 > LARGEST || fr2 > 0 || fr1 > 0)
 		{
-			hf1 += 1;
-			hf2 %= 10000000000;
+			hold1 = (bk1 + bk2) / LARGEST;
+			hold2 = (bk1 + bk2) % LARGEST;
+			hold3 = fr1 + fr2 + hold1;
+			fr1 = fr2, fr2 = hold3;
+			bk1 = bk2, bk2 = hold2;
+			printf("%lu%010lu", fr2, bk2);
 		}
-
-		printf("%lu%lu", hf1, hf2);
-		if (wax != 98)
+		else
+		{
+			hold2 = bk1 + bk2;
+			bk1 = bk2, bk2 = hold2;
+			printf("%lu", bk2);
+		}
+		if (count != 97)
+		{
 			printf(", ");
-
-		n1_hf1 = n2_hf1;
-		n1_hf2 = n2_hf2;
-		n2_hf1 = hf1;
-		n2_hf2 = hf2;
+		}
 	}
 	printf("\n");
-
 	return (0);
-
 }
