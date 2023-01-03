@@ -33,9 +33,19 @@ void times_table(void)
 			{
 				putchar(z + '0');
 			}
+			if (y != 9)
+			{
+				putchar(',');
+				putchar(' ');
+			}
 			y++;
 		}
 		putchar('\n');
 		x++;
 	}
+}
+int main()
+{
+	times_table();
+	return (0);
 }
