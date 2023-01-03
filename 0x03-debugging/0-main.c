@@ -2,7 +2,7 @@
 #include "main.h"
 
 /**
- * main - test for positive or negative integers
+ * main - tests functions that prints if integer is positive or negative
  *
  * Return: always 0
  */
@@ -13,6 +13,5 @@ int main(void)
 	i = 0;
 	positive_or_negative(i);
 
-	printf("\n");
 	return (0);
 }
