@@ -41,11 +41,5 @@ void times_table(void)
 			y++;
 		}
 		putchar('\n');
-		x++;
 	}
-}
-int main()
-{
-	times_table();
-	return (0);
 }
