@@ -4,11 +4,11 @@
 
 /**
  * cap_string - Capitalizes all wordsd
- * @str: parameter
+ * @s: parameter
  * Return: returns str
  */
 
-char *cap_string(char *str)
+char *cap_string(char *s)
 {
 	int i = 0;
 
