@@ -7,7 +7,7 @@
  * @accept: parmetr
  * Return: return 0
  */
-char *-strphbrk(char *s, char *accept)
+char *_strphbrk(char *s, char *accept)
 {
 	int i, j;
 	char *p;
